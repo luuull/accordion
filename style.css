@@ -1,0 +1,98 @@
+
+
+body{
+    text-align: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,170,233,1) 100%); 
+}
+
+
+.container{
+    text-align: center;
+}
+
+
+h1 {
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 50px; 
+    text-align: center;
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+}
+
+h1:after {
+    content: attr(data-shadow);
+    text-shadow: none;
+    background-image:
+    linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(166, 142, 253, 0.521) 10%,
+        rgb(33, 1, 63) 90%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shad-anim 15s linear infinite;
+}
+  
+@keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+}
+
+.accordion {
+    color: rgb(159,35,113);
+    cursor: grab;
+    padding: 18px;
+    width: 60%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.4s;
+    border: .8em darkviolet;
+    border-style: dotted double;
+    margin: 1em 0;
+    padding: 1.4em;
+    background: linear-gradient(60deg, rgba(255, 0, 0, 0.5), rgb(1, 223, 56), rgba(255, 0, 0, 0.5), rgba(255, 238, 0, 0.884), rgba(255, 0, 0, 0.5));
+    font: 900 1.2em sans-serif;
+    text-decoration: solid;
+    background-clip: border-box;
+    border-radius: 10px;
+}
+  
+.active, .accordion:hover {
+    background-color: rgb(255, 116, 116); 
+}
+  
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: none;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+    overflow: hidden;
+    border: .8em darkviolet;
+    border-style: dotted double;
+    border-radius: 10px;
+    text-align: center;
+    width: 35%;
+    padding: 18px;
+    background: radial-gradient(circle, rgba(34,195,127,1) 0%, rgba(253,45,82,1) 100%);  
+    font: 900 1.2em sans-serif;
+    text-decoration: underline;
+    /*adicionar transparência ao texto*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+}
+
