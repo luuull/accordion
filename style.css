@@ -86,7 +86,9 @@ h1:after {
     border-radius: 10px;
     text-align: center;
     width: 35%;
-    padding: 18px;
+    padding: 0 18px;
+    background-color: white;
+    display: none;
     background: radial-gradient(circle, rgba(34,195,127,1) 0%, rgba(253,45,82,1) 100%);  
     font: 900 1.2em sans-serif;
     text-decoration: underline;
